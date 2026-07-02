@@ -1,9 +1,9 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class dbconfig {
+public class DBConfig {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/student_managementsystem";
+    private static final String URL = "jdbc:mysql://localhost:3306/practicetaskdb";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "123456";
 

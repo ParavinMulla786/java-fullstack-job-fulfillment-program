@@ -6,11 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Connection con = dbconfig.getConnection();
+        Connection con = DBConfig.getConnection();
 
         try {
 
-            String sql = "SELECT * FROM students";
+            String sql = "SELECT * FROM users";
 
             PreparedStatement ps = con.prepareStatement(sql);
 
@@ -18,15 +18,13 @@ public class Main {
 
             while (rs.next()) {
 
-                System.out.println("-----------------------------");
+                System.out.println("----------------------------");
 
-                System.out.println("Student ID : " + rs.getInt("student_id"));
-                System.out.println("First Name : " + rs.getString("first_name"));
-                System.out.println("Last Name  : " + rs.getString("last_name"));
-                System.out.println("Email      : " + rs.getString("email"));
-                System.out.println("Phone      : " + rs.getString("phone"));
-                System.out.println("Dept ID    : " + rs.getInt("dept_id"));
-                System.out.println("Admission  : " + rs.getDate("admission_date"));
+                System.out.println("ID      : " + rs.getInt("id"));
+                System.out.println("Name    : " + rs.getString("name"));
+                System.out.println("Email   : " + rs.getString("email"));
+                System.out.println("Task ID : " + rs.getInt("task_id"));
+
             }
 
             rs.close();
